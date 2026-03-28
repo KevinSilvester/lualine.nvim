@@ -9,7 +9,7 @@ M.sources = {
     local diagnostics = vim.diagnostic.get(0)
     local count = { 0, 0, 0, 0 }
     for _, diagnostic in ipairs(diagnostics) do
-      if vim.startswith(vim.diagnostic.get_namespace(diagnostic.namespace).name, 'vim.lsp') then
+      if vim.startswith(vim.diagnostic.get_namespace(diagnostic.namespace).name, 'nvim.lsp') then
         count[diagnostic.severity] = count[diagnostic.severity] + 1
       end
     end
